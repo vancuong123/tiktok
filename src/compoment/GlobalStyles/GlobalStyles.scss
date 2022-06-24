@@ -1,21 +1,37 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Roboto:wght@300;500;700&display=swap');
 
 :root {
     --primery: #fe2c55;
     --black-header: #404040;
     --text-color: #333;
 
+    --font-family: 'ProximaNova', sans-serif;
+
     //default layout
     --defautl-layout-header-hight: 60px;
     --defautl-layout-width: 1150px;
+    --defautl-layout-horizonter-spacer: 24px;
 }
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
+    overflow-y: overlay;
+}
+//scrollbar
+html ::-webkit-scrollbar {
+    border-radius: 0px;
+    width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+html ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -26,7 +42,6 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-
 button,
 input,
 [tabindex] {
@@ -34,7 +49,46 @@ input,
     border: none;
 }
 
-a[href] {
+a {
     color: var(--text-color);
     text-decoration: none;
+}
+//font emmbeded
+@font-face {
+    font-family: ProximaNova;
+    src: url(/acsess/font/Proxima-Nova-Bold.woff);
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(/acsess/font/Proxima-Nova-Regular.woff2);
+    font-weight: 600;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url(/acsess/font/Proxima-Nova-Semibold.woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: SophiaPro;
+    src: url(/acsess/font/sofiapro-bold.woff2);
+    font-weight: 700;
+}
+
+//tippy
+body {
+    .tippy-box {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        border-radius: 8px;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+    }
+    .tippy-arrow {
+        color: #616161;
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
 }

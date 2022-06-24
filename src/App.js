@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { pulicRoute } from '~/routes';
-import { DefaultLayout } from '~/compoment/Layout';
+import { DefaultLayout } from '~/layout';
 
 function App() {
     return (
