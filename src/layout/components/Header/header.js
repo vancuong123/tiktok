@@ -19,7 +19,7 @@ import config from '~/config';
 import Menu from '~/compoment/Popper/Menu';
 import Button from '~/compoment/Button';
 import styles from './Header.module.scss';
-import images from '~/acsess/img';
+import images from '~/assets/img';
 import Search from '~/compoment/Search';
 
 import Image from '~/compoment/Image';

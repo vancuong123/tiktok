@@ -7,7 +7,8 @@
     margin-top: var(--defautl-layout-header-hight);
     width: var(--defautl-layout-width);
     display: flex;
-    padding: 0 var(--defautl-layout-horizonter-spacer);
+    padding: 0 24px 0 12px;
+    max-width: 100%;
 }
 .content {
     flex: 1;
