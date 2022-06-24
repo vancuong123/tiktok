@@ -1,0 +1,92 @@
+.wrapper {
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --width-btn: 52px;
+
+    width: 100%;
+    height: var(--defautl-layout-header-hight);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+}
+
+.inner {
+    height: 100%;
+    width: var(--defautl-layout-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-result,
+.search {
+    width: 361px;
+}
+
+.search-title {
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.4rem;
+    padding: 5px 12px;
+}
+
+.search {
+    position: relative;
+    height: var(--search-height);
+    display: flex;
+    padding-left: 16px;
+    background: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+    overflow: hidden;
+    border: 1.5px solid transparent;
+    input {
+        flex: 1;
+        color: var(--black-header);
+        caret-color: var(--primery);
+        font-weight: 400;
+        font-size: 1.6rem;
+        background-color: transparent;
+    }
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        width: 1px;
+        top: var(--search-top-spacer);
+        right: var(--width-btn);
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
+.clear,
+.loading {
+    color: rgba(22, 24, 35, 0.34);
+    position: absolute;
+    right: calc(var(--width-btn) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-btn {
+    width: var(--width-btn);
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.custom {
+    color: red;
+}

@@ -1,0 +1,40 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Roboto:wght@300;500;700&display=swap');
+
+:root {
+    --primery: #fe2c55;
+    --black-header: #404040;
+    --text-color: #333;
+
+    //default layout
+    --defautl-layout-header-hight: 60px;
+    --defautl-layout-width: 1150px;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+}
+
+html {
+    font-size: 62.5%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
+}
